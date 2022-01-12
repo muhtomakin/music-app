@@ -239,7 +239,7 @@ body {
   }
 }
 
-.playlistPage{
+.playlistPage {
   background-color: rgb(214, 214, 214);
   .mainInner {
     background-image: -webkit-gradient(
@@ -254,14 +254,13 @@ body {
     display: flex;
     flex-direction: column;
   }
-  .playlistPageInfo{
+  .playlistPageInfo {
     text-align: center;
     padding: 1.5rem 0;
     display: flex;
-    .playlistPageImage{
+    .playlistPageImage {
       width: 250px;
       height: 250px;
-      margin-right: 2rem;     
       img {
         height: 100%;
         width: 100%;
@@ -272,15 +271,14 @@ body {
     }
   }
   .playlistPageSongs {
-    height: 100%;    
-    .playButtons {
+    height: 100%;
+    .playlistButtons {
       display: flex;
       align-items: center;
     }
     .playIcon {
       @extend .playIcon;
       opacity: 1;
-      margin: auto;
       position: relative;
       margin-left: 0;
       height: 56px;
@@ -290,24 +288,40 @@ body {
       svg {
         height: 26px;
         width: 26px;
-      }
+        }   
     }
     .icons {
       .icon {
-        margin-left: 5rem;
+        margin-left: 1.5rem;
       }
       .iconsHeart {
-        width: 28 px;
-        height: 28px;
+        width: 1px;
+        height: 1px;
+        opacity: 0.5;
         svg {
           fill: white;
+        }
+        &:hover {
+          opacity: 1;
+        }
+      }
+      .iconsDots {
+        margin-left: 5rem;
+        width: 35px;
+        height: 35px;
+        opacity: 0.5;
+        svg {
+          fill: white;
+        }
+        &:hover {
+          opacity: 1;
         }
       }
     }
   }
-  .playlistPageContent{
+  .playlistPageContent {
     text-align: left;
-    padding-left: 1.5rem 2rem;
+    padding: 1.5rem 2rem;
     h1 {
       font-size: 7rem;
       margin: 0;
@@ -317,8 +331,8 @@ body {
       letter-spacing: -6px;
     }
     .tagline {
-      font-size: 1rem;
-      opacity: 0.6;
+      font-size: 0.9rem;
+      opacity: 0.7;
       margin-bottom: 0.5rem;
     }
     .playlistPageDesc {
@@ -329,7 +343,7 @@ body {
         margin: 0;
       }
       span {
-        opacity: 0.5;
+        opacity: 0.7;
         position: relative;
         padding-left: 20px;
         &:before {
@@ -341,31 +355,81 @@ body {
           border-radius: 50%;
           position: absolute;
           margin-left: -10px;
-          top: 7px;
+          top: 9px;
         }
       }
     }
   }
 }
 
+.playlistHeadline{
+  grid-template-columns: [index] 16px [first] 6fr [var1] 4fr [var2] 3fr [last] minmax(10px,1fr);
+  border-bottom: 1px solid rgba(255,255,255,.1);
+  color: #b3b3b3;
+  height: 100%;
+  grid-gap: 16px;
+  display: grid;
+  padding: 0 16px;
+  span {
+    font-size: 1.3rem;
+    margin-top: 2.3rem;
+  }
+  p {
+    font-size: 1.1rem;
+    padding-top: 1.4rem;
+  }
+  .timeIcon{
+    margin-left: auto;
+    width: 24px;
+    height: 24px;
+    margin-top: 2rem;
+    svg {
+      fill: currentColor;
+    }
+  }
+}
+
 ul.songList {
-  padding: 0;
+  padding-left: 0.5rem;
   li {
     list-style-type: none;
     width: 100%;
-    padding: 0.5rem;
+    padding: 0.8rem;
     display: flex;
     align-items: center;
+    transition: background 0.2s ease-in-out;
+    &:hover {
+      background: rgba(255, 255, 255, 0.1);
+      .songIcon {
+        .playI {
+          display: block;
+        }
+      }
+    }
     .songDetails {
       h3 {
         margin: 0;
+        font-weight: 300;
+        font-size: 1rem;
+      }
+      span {
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 0.9rem;
       }
     }
     .songTime {
       margin-left: auto;
     }
-    &:hover {
-      background: chartreuse;
+    .songIcon {
+      padding-right: 1rem;
+      .playI {
+        display: none;
+      }
+      svg {
+        fill: rgba(255, 255, 255, 0.7);
+        width: 15px;
+        height: 15px;
+      }
     }
   }
 }

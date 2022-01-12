@@ -2,7 +2,8 @@ import React from 'react'
 import { useParams } from 'react-router-dom'
 import {ReactComponent as PlayIcon} from '../../svgs/play.svg'
 import {ReactComponent as HeartIcon} from '../../svgs/heart.svg'
-
+import {ReactComponent as DotIcon} from '../../svgs/dot.svg'
+import {ReactComponent as TimeIcon} from '../../svgs/time.svg'
 
 const PlaylistPage = () => {
 
@@ -26,7 +27,6 @@ const PlaylistPage = () => {
                         </div>                           
                     </div>         
                 </div>
-                
                 <div className='playlistPageSongs'>
                     <div className='playlistButtons'>
                         <span className="playIcon">
@@ -36,62 +36,25 @@ const PlaylistPage = () => {
                             <div className='icon iconsHeart'>  
                                 <HeartIcon />     
                             </div>
-                            <div className='icon iconsDots'></div>
+                            <div className='icon iconsDots'>
+                                <DotIcon />
+                            </div>
                         </div>
                     </div>
+                </div>
+                <div className='playlistHeadline'>
+                    <span>#</span>
+                    <p className='smallText uppercase'>Title</p>
+                    <p className='smallText uppercase'>Plays</p>
+                    <p className='smallText uppercase'>Album</p>
+                    <TimeIcon className='timeIcon' />
+                </div>
+                <div>
                     <ul className='songList'>
                         <li>
-                            <div className='songIcon'></div>
-                            <div className='songDetails'>
-                                <h3>Sexy Back</h3>
-                                <span>Justin Timberlake</span>
+                            <div className='songIcon'>
+                                <PlayIcon className="playI" />
                             </div>
-                            <div className='songTime'>
-                                <span>4.32</span>
-                            </div>
-                        </li>
-                        <li>
-                            <div className='songIcon'></div>
-                            <div className='songDetails'>
-                                <h3>Sexy Back</h3>
-                                <span>Justin Timberlake</span>
-                            </div>
-                            <div className='songTime'>
-                                <span>4.32</span>
-                            </div>
-                        </li>
-                        <li>
-                            <div className='songIcon'></div>
-                            <div className='songDetails'>
-                                <h3>Sexy Back</h3>
-                                <span>Justin Timberlake</span>
-                            </div>
-                            <div className='songTime'>
-                                <span>4.32</span>
-                            </div>
-                        </li>
-                        <li>
-                            <div className='songIcon'></div>
-                            <div className='songDetails'>
-                                <h3>Sexy Back</h3>
-                                <span>Justin Timberlake</span>
-                            </div>
-                            <div className='songTime'>
-                                <span>4.32</span>
-                            </div>
-                        </li>
-                        <li>
-                            <div className='songIcon'></div>
-                            <div className='songDetails'>
-                                <h3>Sexy Back</h3>
-                                <span>Justin Timberlake</span>
-                            </div>
-                            <div className='songTime'>
-                                <span>4.32</span>
-                            </div>
-                        </li>
-                        <li>
-                            <div className='songIcon'></div>
                             <div className='songDetails'>
                                 <h3>Sexy Back</h3>
                                 <span>Justin Timberlake</span>
